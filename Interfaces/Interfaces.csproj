@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Entities\Entities.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="Repositories\IBalanceTransactionRepository.cs" />
+      <Compile Include="Repositories\IBetRepository.cs" />
+      <Compile Include="Repositories\IBetSelectionRepository.cs" />
+      <Compile Include="Repositories\IPlayerRepository.cs" />
+    </ItemGroup>
+
+</Project>

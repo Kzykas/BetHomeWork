@@ -1,0 +1,14 @@
+# Rider
+.idea/
+*.sln.iml
+*.csproj.user
+
+# .NET
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.vs/

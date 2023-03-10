@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="11.2.1" />
+      <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+      <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="Operations\Bet\IMakeBet.cs" />
+      <Compile Include="Operations\Bet\MakeBet.cs" />
+      <Compile Include="Operations\Bet\MakeBetInput.cs" />
+      <Compile Include="Operations\Shared\ValidationResponse.cs" />
+      <Compile Include="ValidationServices\MaxWinAmountValidationServices\IWinAmountValidationService.cs" />
+      <Compile Include="ValidationServices\MaxWinAmountValidationServices\WinAmountValidationService.cs" />
+      <Compile Include="ValidationServices\PlayerValidationServices\IPlayerValidationService.cs" />
+      <Compile Include="ValidationServices\PlayerValidationServices\PlayerValidationService.cs" />
+      <Compile Include="ValidationServices\SelectionValidationServices\ISelectionValidationService.cs" />
+      <Compile Include="ValidationServices\SelectionValidationServices\SelectionValidationService.cs" />
+      <Compile Include="ValidationServices\ValidationConstants.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+        <HintPath>..\..\..\.dotnet\shared\Microsoft.AspNetCore.App\7.0.3\Microsoft.AspNetCore.Mvc.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
